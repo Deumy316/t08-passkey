@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>왜가 해결되어야 앞으로 가는 사람</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, "Malgun Gothic", sans-serif;
+            background: #f4f6f8;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #17324d;
+            color: white;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 18px;
+            font-size: 40px;
+        }
+
+        header p {
+            max-width: 760px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1050px;
+            margin: 40px auto;
+        }
+
+        section {
+            background: white;
+            padding: 32px;
+            margin-bottom: 26px;
+            border-radius: 14px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #17324d;
+        }
+
+        h3 {
+            color: #285d88;
+        }
+
+        .highlight {
+            font-size: 23px;
+            font-weight: bold;
+            color: #17324d;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 7px 13px;
+            margin: 4px;
+            border-radius: 20px;
+            background: #e9f0f6;
+        }
+
+        .experience {
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #285d88;
+            background: #f8fafc;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #edf2f6;
+        }
+
+        .work-style {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .work-card {
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 10px;
+        }
+
+        .quote {
+            padding: 18px;
+            margin: 15px 0;
+            background: #f7f7f7;
+            border-left: 4px solid #777;
+        }
+
+        button {
+            border: none;
+            padding: 14px 22px;
+            border-radius: 8px;
+            background: #17324d;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #285d88;
+        }
+
+        button:focus {
+            outline: 4px solid #f0b429;
+            outline-offset: 3px;
+        }
+
+        #detail {
+            margin-top: 20px;
+            padding: 22px;
+            background: #edf3f7;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px;
+            color: #555;
+        }
+
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            main {
+                width: 94%;
+            }
+
+            section {
+                padding: 22px;
+            }
+
+            .work-style {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+
+        .evidence-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 11px 18px;
+            background: white;
+            color: #17324d;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .evidence-link:hover {
+            text-decoration: underline;
+        }
+
+        .evidence-link:focus {
+            outline: 4px solid #f0b429;
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>김경민이란 사람을 소개합니다.</h1>
+
+        <p>
+            궁금한 것은 그냥 넘기기보다 비교하고 확인합니다.
+            이해가 될 때까지 파고들고,
+            스스로 납득한 뒤 다음 단계로 움직이는 사람입니다.
+        </p>
+
+        <p>
+            <strong>현재:</strong>
+            유지보수 경험을 바탕으로 네트워크 보안 분야로 전환하고 있습니다.
+        </p>
+
+        <p>
+            <strong>남기는 근거:</strong>
+            직접 만든 프로젝트와 학습 과정을 GitHub에 기록하고 있습니다.
+        </p>
+
+        <a class="evidence-link" href="https://github.com/Deumy316/my-intro-page" target="_blank"
+            rel="noopener noreferrer">
+            GitHub 프로젝트 보기
+        </a>
+    </header>
+
+
+    <main>
+
+        <!-- 1. 한 문장 -->
+
+        <section>
+            <h2>1. 나는 어떤 사람인가</h2>
+
+            <p class="highlight">
+                왜가 해결되어야 앞으로 가는 사람입니다.
+            </p>
+
+            <p>
+                저는 궁금한 것이 생기면 여러 정보를 비교하고,
+                직접 확인하면서 답을 찾으려고 합니다.
+                처음에는 엉뚱해 보이는 궁금증이라도
+                끝까지 파고들면서 새로운 것을 발견하는 과정을 좋아합니다.
+            </p>
+
+            <div>
+                <span class="tag">호기심</span>
+                <span class="tag">판단력</span>
+                <span class="tag">창의성</span>
+                <span class="tag">확인</span>
+                <span class="tag">비교</span>
+            </div>
+        </section>
+
+
+        <!-- 2. 지금 하고 있는 것 -->
+
+        <section>
+            <h2>2. 지금 하고 있는 것</h2>
+
+            <p class="highlight">
+                유지보수 경험에서 출발해 네트워크 보안으로 전환하고 있습니다.
+            </p>
+
+            <p>
+                저는 IT 유지보수와 개발 업무를 경험했습니다.
+                업무를 하면서 단순히 프로그램을 수정하는 것을 넘어
+                시스템이 어떻게 연결되고 데이터가 어떻게 움직이는지에
+                관심을 가지게 되었습니다.
+            </p>
+
+            <p>
+                지금은 그 관심을 네트워크와 정보보안 분야로 확장하고 있습니다.
+                앞으로 네트워크 보안 분야에서 일하는 것을 목표로 하고 있으며,
+                현재는 교육과 실습을 통해 관련 기술을 배우고 있습니다.
+            </p>
+
+            <p>
+                앞으로 넉 달 동안 배운 내용을 하나의 최종 프로젝트로 완성하여
+                제가 무엇을 공부했고 무엇을 만들 수 있는지를 보여주는
+                결과물을 남기는 것이 목표입니다.
+            </p>
+        </section>
+
+
+        <!-- 3. 강점과 실제 장면 -->
+
+        <section>
+            <h2>3. 나를 보여주는 세 가지 장면</h2>
+
+
+            <div class="experience">
+
+                <h3>01. 창의성 — 정해진 방법에서 더 나은 방법을 찾습니다.</h3>
+
+                <p>
+                    <strong>상황:</strong>
+                    업무를 매뉴얼대로 처리해보니 반복되는 과정이 많고
+                    비효율적인 부분이 있었습니다.
+                </p>
+
+                <p>
+                    <strong>행동:</strong>
+                    기존 방법을 먼저 그대로 수행한 뒤,
+                    제가 생각한 다른 방법으로도 업무를 처리해보고
+                    두 방법의 결과를 비교했습니다.
+                </p>
+
+                <p>
+                    <strong>결과:</strong>
+                    더 간결하게 처리할 수 있는 방법을 찾아 실제 업무에 활용했고,
+                    이후 업무를 이어받는 사람에게도 제가 사용한 방법을 공유했습니다.
+                </p>
+
+            </div>
+
+
+            <div class="experience">
+
+                <h3>02. 판단력 — 필요한 순간에는 우선순위를 정합니다.</h3>
+
+                <p>
+                    <strong>상황:</strong>
+                    당일 업무시간 안에 완료하기 어려운 작업을 맡게 되었습니다.
+                </p>
+
+                <p>
+                    <strong>행동:</strong>
+                    업무량과 남은 시간을 판단한 뒤
+                    필요한 작업을 먼저 정리하고 추가 시간을 활용해 작업했습니다.
+                </p>
+
+                <p>
+                    <strong>결과:</strong>
+                    다음 업무가 시작되기 전에 필요한 작업을 마무리하여
+                    이후 업무가 지연되지 않도록 했습니다.
+                </p>
+
+            </div>
+
+
+            <div class="experience">
+
+                <h3>03. 호기심 — 궁금한 것은 직접 눌러보고 확인합니다.</h3>
+
+                <p>
+                    <strong>상황:</strong>
+                    새로운 페이지를 배포하기 전에
+                    오류와 오타 등을 전체적으로 점검하는 작업이 있었습니다.
+                </p>
+
+                <p>
+                    <strong>행동:</strong>
+                    정해진 기능만 확인하지 않고
+                    페이지의 여러 메뉴와 버튼을 직접 눌러보며
+                    예상하지 못한 동작까지 확인했습니다.
+                </p>
+
+                <p>
+                    <strong>결과:</strong>
+                    점검 과정에서 여러 오류와 수정할 부분을 발견했고
+                    실제 배포 전에 문제를 줄일 수 있었습니다.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 4. 4개월 계획 -->
+
+        <section>
+
+            <h2>4. 앞으로 넉 달 동안 남길 것</h2>
+
+            <p>
+                공부만 했다는 말보다 실제로 보여줄 수 있는 기록과
+                프로젝트를 남기는 것을 목표로 합니다.
+            </p>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>기간</th>
+                        <th>무엇을 할 것인가</th>
+                        <th>남는 증거</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td><strong>1개월</strong></td>
+                        <td>
+                            수업 내용 정리<br>
+                            네트워크관리사 2급 필기 준비<br>
+                            프로젝트 기초 구성
+                        </td>
+                        <td>
+                            GitHub README<br>
+                            공부 기록<br>
+                            프로젝트 초기 코드
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2개월</strong></td>
+                        <td>
+                            필기 시험 응시<br>
+                            프로젝트 기본 구조 구현
+                        </td>
+                        <td>
+                            필기 결과<br>
+                            GitHub 프로젝트 기록<br>
+                            학습 과정 정리
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>3개월</strong></td>
+                        <td>
+                            실기 시험 준비<br>
+                            프로젝트 주요 기능 완성
+                        </td>
+                        <td>
+                            실기 학습 기록<br>
+                            프로젝트 코드<br>
+                            프로젝트 진행 기록
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>4개월</strong></td>
+                        <td>
+                            실기 시험 응시<br>
+                            최종 프로젝트 완성<br>
+                            취업 준비
+                        </td>
+                        <td>
+                            자격 결과<br>
+                            최종 프로젝트<br>
+                            포트폴리오
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- 5. 일하는 방식 -->
+
+        <section>
+
+            <h2>5. 저와 일하실 분께</h2>
+
+            <div class="work-style">
+
+                <div class="work-card">
+
+                    <h3>ON — 제가 잘 움직일 때</h3>
+
+                    <ul>
+                        <li>목표와 해야 할 일이 명확할 때</li>
+                        <li>궁금증을 자극하는 새로운 문제가 있을 때</li>
+                        <li>직접 비교하고 확인할 수 있을 때</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="work-card">
+
+                    <h3>막히면 이렇게 합니다</h3>
+
+                    <ul>
+                        <li>먼저 제가 이해한 내용을 정리합니다.</li>
+                        <li>요청한 사람에게 다시 질문합니다.</li>
+                        <li>검색과 문서를 통해 해결 방법을 찾아봅니다.</li>
+                        <li>가능하면 직접 실행해 결과를 확인합니다.</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="work-card">
+
+                    <h3>OFF — 제가 어려움을 느낄 때</h3>
+
+                    <ul>
+                        <li>의견이나 피드백이 전혀 오가지 않을 때</li>
+                        <li>업무의 목적이나 이유를 알기 어려울 때</li>
+                        <li>현실적인 범위를 크게 넘어서는 요청이 주어질 때</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="work-card">
+
+                    <h3>미리 알아두시면 좋은 것</h3>
+
+                    <ul>
+                        <li>새로운 분야에 대한 호기심이 많습니다.</li>
+                        <li>영화, 드라마, 웹툰 등 다양한 콘텐츠를 좋아합니다.</li>
+                        <li>새로운 광고는 끝까지 보는 편입니다.</li>
+                        <li>궁금한 것은 직접 찾아보고 확인하는 편입니다.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 6. 다른 사람이 본 나 -->
+
+        <section>
+
+            <h2>6. 같이 한 사람들이 본 나</h2>
+
+            <p>
+                주변 사람들은 저를 호기심이 많고,
+                정보를 모은 뒤 스스로 판단하는 사람으로 이야기했습니다.
+            </p>
+
+
+            <div class="quote">
+
+                “무엇을 하든 흥미롭게 지켜보고,
+                궁금한 것에 대해 답을 찾거나 제안해주는 사람.”
+
+                <br><strong>- 함께 공부한 동료</strong>
+
+            </div>
+
+
+            <div class="quote">
+
+                “앞으로 하고 싶은 일과 방향을
+                스스로 고민하고 정리하는 모습이 인상적인 사람.”
+
+                <br><strong>- 함께 공부한 동료</strong>
+
+            </div>
+
+
+            <div class="quote">
+
+                “정보를 수집하고 비교한 뒤
+                자신의 기준으로 판단하는 모습이 자주 보이는 사람.”
+
+                <br><strong>- 함께 공부한 동료</strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- 7. 상호작용 -->
+
+        <section>
+
+            <h2>7. 제가 문제를 해결하는 방식</h2>
+
+            <p>
+                버튼을 누르면 제가 궁금한 문제를 만났을 때
+                어떻게 접근하는지 확인할 수 있습니다.
+            </p>
+
+            <button id="detailButton" type="button" aria-expanded="false" aria-controls="detail">
+
+                문제 해결 방식 보기
+
+            </button>
+
+
+            <div id="detail" hidden>
+
+                <h3>궁금한 것이 생겼을 때</h3>
+
+                <ol>
+                    <li>먼저 왜 그런지 질문합니다.</li>
+                    <li>관련된 정보를 찾아봅니다.</li>
+                    <li>여러 방법이나 정보를 비교합니다.</li>
+                    <li>가능하면 직접 실행해서 확인합니다.</li>
+                    <li>결과가 예상과 다르더라도 결과를 인정합니다.</li>
+                    <li>왜 그런 결과가 나왔는지 다시 파고듭니다.</li>
+                </ol>
+
+                <p>
+                    그래서 저는 단순히 정답을 찾는 것보다
+                    <strong>왜 그런 결과가 나왔는지 이해하는 것</strong>을
+                    중요하게 생각합니다.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 8. 공개 범위 -->
+
+        <section>
+
+            <h2>8. 이 페이지의 공개 범위</h2>
+
+            <h3>공개하는 정보</h3>
+
+            <ul>
+                <li>IT 분야의 업무 경험</li>
+                <li>네트워크와 정보보안 분야에 대한 관심</li>
+                <li>학습 목표와 프로젝트 계획</li>
+            </ul>
+
+
+            <h3>공개하지 않는 정보</h3>
+
+            <ul>
+                <li>전화번호와 개인 연락처</li>
+                <li>집 주소와 상세 위치</li>
+                <li>회사 내부 데이터와 개인정보</li>
+            </ul>
+
+        </section>
+
+        <section id="passkey-space">
+            <h2>9. 패스키 비공개 공간</h2>
+            <p>자기소개는 누구나 볼 수 있습니다. 아래 공간은 본인 패스키 인증 후 열립니다.</p>
+            <p>연습용 계정 이름만 사용하세요. 모든 패스키를 잃으면 계정을 복구할 수 없습니다.
+                서로 다른 기기나 저장소에 두 번째 패스키를 등록해 두세요.</p>
+            <div id="signed-out">
+                <label>새 계정 이름 <input id="account-name" maxlength="32" placeholder="demo-a / demo-b" autocomplete="off"></label>
+                <label>패스키 이름 <input id="first-label" maxlength="60" value="첫 패스키"></label>
+                <button id="signup" type="button">새 계정과 패스키 만들기</button>
+                <button id="login" type="button">패스키로 로그인</button>
+            </div>
+            <div id="signed-in" hidden>
+                <p id="account-info"></p>
+                <button id="logout" type="button">로그아웃</button>
+                <h3>나만의 가상 메모</h3><ul id="private-notes"></ul>
+                <h3>등록한 패스키</h3><ul id="passkey-list"></ul>
+                <label>추가 패스키 이름 <input id="extra-label" maxlength="60" value="두 번째 패스키"></label>
+                <button id="add-key" type="button">본인 인증 후 패스키 추가</button>
+            </div>
+            <p id="auth-status" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>
+            왜가 해결되어야 앞으로 가는 사람
+        </p>
+    </footer>
+
+
+    <script>
+
+        var detailButton = document.getElementById("detailButton");
+        var detail = document.getElementById("detail");
+
+
+        detailButton.addEventListener("click", function () {
+
+            if (detail.hidden === true) {
+
+                detail.hidden = false;
+
+                detailButton.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+                detailButton.innerText =
+                    "문제 해결 방식 접기";
+
+            } else {
+
+                detail.hidden = true;
+
+                detailButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                detailButton.innerText =
+                    "문제 해결 방식 보기";
+
+            }
+
+        });
+
+    </script>
+
+
+    <script src="/static/passkeys.js" defer></script>
+</body>
+
+</html>
