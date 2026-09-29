@@ -74,7 +74,7 @@ async function run(action) {
             ? '취소되었거나 시간이 초과되었습니다. 미완료 계정·패스키는 서버에 저장하지 않습니다.'
             : error.message;
     } finally {
-        document.querySelectorAll('#signed-out button, #logout, #add-key').forEach(b => b.disabled=false);
+        document.querySelectorAll('#signed-out button, #logout, #add-key, #link-start, #link-copy, #link-cancel, #link-approve').forEach(b => b.disabled=false);
         // Rebuild key controls without overriding an error message.
         try { await refresh(); } catch (_) { el('signed-in').hidden=true; el('private-notes').replaceChildren(); }
     }

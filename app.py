@@ -231,10 +231,12 @@ def create_app(db_path=None):
     def auth_options():
         body = data()
         action = body.get('action', 'login')
-        if action not in ('login', 'add', 'delete'):
+        if action not in ('login', 'add', 'delete', 'link-create', 'link-approve'):
             abort(400)
         uid = None if action == 'login' else logged_in()
         target = str(body.get('target', '')) if action == 'delete' else ''
+        if action == 'link-approve':
+            target = link_approval_target(str(body.get('target', '')))
         ids = db().execute('SELECT id FROM credentials WHERE user_id=?', (uid,)).fetchall() if uid else []
         options = generate_authentication_options(rp_id=rp,
             allow_credentials=[PublicKeyCredentialDescriptor(id=r['id']) for r in ids],
@@ -334,6 +336,9 @@ def create_app(db_path=None):
         conn.commit()
         return jsonify(ok=True)
 
+    from device_links import setup_device_links
+    link_approval_target = setup_device_links(app, db, data, logged_in, grant,
+        save_challenge, consume, origin, rp, ROOT)
     return app
 
 

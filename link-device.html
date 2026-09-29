@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    <title>T08 새 기기 패스키 연결</title>
+    <style>
+        body {font-family:Arial,"Malgun Gothic",sans-serif;background:#f4f6f8;color:#17324d;line-height:1.7;margin:0;padding:24px}
+        main {max-width:600px;margin:auto;background:white;padding:24px;border-radius:14px}
+        input,button {font:inherit;padding:12px;margin:8px 0;max-width:100%;box-sizing:border-box}
+        button {background:#17324d;color:white;border:0;border-radius:8px}
+        #code {font-size:1.6em;overflow-wrap:anywhere}
+    </style>
+    <script src="/static/device-link-phone.js" defer></script>
+</head>
+<body><main>
+    <h1>이 기기에 패스키 연결</h1>
+    <p>직접 PC에서 시작한 연결만 진행하세요. 링크만으로 로그인되지는 않습니다.</p>
+    <p id="account"></p>
+    <div id="enrollment" hidden>
+        <label>새 패스키 이름 <input id="label" maxlength="60" value="아이폰 패스키"></label>
+        <button id="create" type="button">이 기기에 패스키 만들기</button>
+    </div>
+    <p id="status" role="status" aria-live="polite">연결을 확인하고 있습니다.</p>
+    <p id="code"></p>
+    <button id="cancel" type="button" hidden>연결 취소</button>
+    <p><a href="/">홈으로 이동하여 패스키로 로그인</a></p>
+</main></body></html>

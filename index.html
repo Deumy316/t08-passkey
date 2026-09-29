@@ -644,6 +644,17 @@
                 <h3>등록한 패스키</h3><ul id="passkey-list"></ul>
                 <label>추가 패스키 이름 <input id="extra-label" maxlength="60" value="두 번째 패스키"></label>
                 <button id="add-key" type="button">본인 인증 후 패스키 추가</button>
+                <button id="link-start" type="button">아이폰/다른 기기 패스키 연결</button>
+                <div id="link-panel" hidden>
+                    <p>5분 안에 내 기기에서만 여세요. PC에서 로그아웃하면 연결은 취소됩니다.</p>
+                    <label>연결 링크 <input id="link-url" readonly style="width:100%"></label>
+                    <button id="link-copy" type="button">링크 복사</button>
+                    <div id="link-qr" aria-label="다른 기기에서 열 연결 QR"></div>
+                    <p id="link-state" role="status"></p>
+                    <p>확인 코드: <strong id="link-code"></strong></p>
+                    <button id="link-approve" type="button" hidden>코드 일치 확인 후 본인 인증하여 승인</button>
+                    <button id="link-cancel" type="button">연결 취소 / 거절</button>
+                </div>
             </div>
             <p id="auth-status" role="status" aria-live="polite"></p>
         </section>
@@ -697,6 +708,7 @@
 
 
     <script src="/static/passkeys.js" defer></script>
+    <script src="/static/device-link-pc.js" defer></script>
 </body>
 
 </html>
